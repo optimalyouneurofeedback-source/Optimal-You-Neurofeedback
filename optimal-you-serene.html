@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optimal You Neurofeedback — The Gym for Your Brain</title>
+<meta name="description" content="Optimal You Neurofeedback in Gresham, Oregon. NeurOptimal® brain training for focus, resilience, and calm. Your brain already knows how to perform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF4E6;
+    --cream-2:#F5EBD7;
+    --teal:#3E6F74;
+    --teal-deep:#17454E;
+    --teal-soft:#6E979B;
+    --gold:#C2A05A;
+    --ink:#26383B;
+    --sage:#DDE3C8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65;}
+  h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;}
+  img{max-width:100%;}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;background:rgba(251,244,230,.92);backdrop-filter:blur(8px);z-index:100;border-bottom:1px solid rgba(62,111,116,.15);}
+  .nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:.8rem 1.5rem;}
+  .brand{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:600;color:var(--teal-deep);text-decoration:none;letter-spacing:.02em;}
+  .brand span{color:var(--gold);}
+  .nav-links{display:flex;gap:1.6rem;list-style:none;flex-wrap:wrap;}
+  .nav-links a{text-decoration:none;color:var(--teal-deep);font-size:.92rem;font-weight:500;letter-spacing:.04em;transition:color .2s;}
+  .nav-links a:hover{color:var(--gold);}
+  .nav-cta{background:var(--teal);color:#fff !important;padding:.45rem 1.1rem;border-radius:999px;}
+  .nav-cta:hover{background:var(--teal-deep);color:#fff !important;}
+  @media(max-width:820px){.nav-links{display:none;}}
+
+  /* HERO */
+  header{
+    min-height:100vh;display:flex;align-items:center;
+    background:
+      radial-gradient(ellipse at 75% 20%, rgba(194,160,90,.25), transparent 55%),
+      radial-gradient(ellipse at 15% 85%, rgba(110,151,155,.35), transparent 60%),
+      linear-gradient(160deg, var(--teal-deep) 0%, var(--teal) 55%, #55868B 100%);
+    color:var(--cream);position:relative;overflow:hidden;padding:7rem 1.5rem 5rem;
+  }
+  .hero-waves{position:absolute;inset:auto 0 0 0;opacity:.5;}
+  .hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:3rem;align-items:center;}
+  @media(max-width:820px){.hero-inner{grid-template-columns:1fr;}}
+  .kicker{text-transform:uppercase;letter-spacing:.35em;font-size:.78rem;color:var(--gold);margin-bottom:1.2rem;font-weight:500;}
+  h1{font-size:clamp(2.6rem,5.5vw,4.2rem);line-height:1.08;font-weight:600;margin-bottom:1.4rem;}
+  h1 em{color:#EBD9AE;font-style:italic;}
+  .hero-sub{font-size:1.15rem;font-weight:300;max-width:34rem;margin-bottom:2.2rem;color:#EAF1EE;}
+  .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.4rem;}
+  .btn{display:inline-block;padding:.85rem 1.9rem;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.05em;font-size:.95rem;transition:all .25s;}
+  .btn-gold{background:var(--gold);color:var(--teal-deep);}
+  .btn-gold:hover{background:#d4b477;transform:translateY(-2px);}
+  .btn-ghost{border:1px solid rgba(251,244,230,.6);color:var(--cream);}
+  .btn-ghost:hover{background:rgba(251,244,230,.12);}
+  .hero-script{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.25rem;color:#EBD9AE;}
+  .hero-card{background:rgba(23,69,78,.55);border:1px solid rgba(235,217,174,.35);border-radius:18px;padding:2rem;backdrop-filter:blur(4px);}
+  .hero-card h3{font-size:1.5rem;color:#EBD9AE;margin-bottom:1rem;font-weight:600;}
+  .pillars{display:grid;gap:1.1rem;}
+  .pillar{display:flex;gap:.9rem;align-items:flex-start;}
+  .pillar svg{flex:none;margin-top:.15rem;}
+  .pillar b{display:block;letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;color:var(--gold);}
+  .pillar span{font-weight:300;font-size:.95rem;color:#E5EEEA;}
+
+  /* TRUST BAR */
+  .trustbar{background:var(--teal-deep);color:var(--cream);}
+  .trust-inner{max-width:1100px;margin:0 auto;padding:1.4rem 1.5rem;display:flex;justify-content:space-between;align-items:center;gap:2rem;flex-wrap:wrap;}
+  .trust-item{text-align:center;flex:1;min-width:150px;}
+  .trust-item b{display:block;letter-spacing:.18em;text-transform:uppercase;font-size:.75rem;color:var(--gold);}
+  .trust-item span{font-size:.85rem;font-weight:300;color:#CFE0DC;}
+  .trust-motto{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.35rem;color:#EBD9AE;white-space:nowrap;}
+
+  /* SECTIONS */
+  section{padding:5.5rem 1.5rem;}
+  .container{max-width:1100px;margin:0 auto;}
+  .sec-kicker{text-transform:uppercase;letter-spacing:.3em;font-size:.75rem;color:var(--gold);font-weight:600;margin-bottom:.6rem;}
+  h2{font-size:clamp(2rem,4vw,2.9rem);color:var(--teal-deep);font-weight:600;margin-bottom:1rem;line-height:1.15;}
+  .rule{width:70px;height:2px;background:var(--gold);margin:1.2rem 0 2rem;}
+  .lead{font-size:1.1rem;max-width:46rem;font-weight:300;}
+
+  /* ABOUT NF */
+  .video-wrap{max-width:820px;margin:0 auto 3rem;border-radius:20px;overflow:hidden;box-shadow:0 22px 50px rgba(23,69,78,.22);border:1px solid rgba(194,160,90,.35);}
+  .video-wrap video{display:block;width:100%;height:auto;background:#000;}
+  .nf-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:3.5rem;align-items:center;}
+  @media(max-width:820px){.nf-grid{grid-template-columns:1fr;}}
+  blockquote{background:#fff;border-left:4px solid var(--gold);border-radius:0 14px 14px 0;padding:1.6rem 1.8rem;font-size:1.02rem;font-weight:300;box-shadow:0 12px 30px rgba(23,69,78,.08);}
+  blockquote footer{margin-top:.9rem;font-size:.85rem;color:var(--teal);}
+  blockquote footer a{color:var(--teal);}
+  .process{list-style:none;display:grid;gap:1.2rem;counter-reset:step;}
+  .process li{display:flex;gap:1.1rem;align-items:flex-start;}
+  .step-num{flex:none;width:2.4rem;height:2.4rem;border-radius:50%;background:var(--teal);color:var(--cream);display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:600;}
+  .process b{color:var(--teal-deep);}
+  .process p{font-weight:300;font-size:.97rem;}
+
+  /* WHO */
+  .who{background:linear-gradient(180deg,var(--cream) 0%,var(--cream-2) 100%);}
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2.5rem;}
+  @media(max-width:820px){.cards{grid-template-columns:1fr;}}
+  .card{background:#fff;border-radius:18px;padding:2rem 1.8rem;box-shadow:0 14px 34px rgba(23,69,78,.09);border-top:5px solid var(--teal);transition:transform .25s;}
+  .card:hover{transform:translateY(-6px);}
+  .card-img{width:100%;height:190px;object-fit:cover;border-radius:12px;margin-bottom:1.4rem;box-shadow:0 8px 20px rgba(23,69,78,.12);}
+  .card-img.contain{object-fit:contain;background:var(--cream-2);}
+  .card h3{font-size:1.7rem;color:var(--teal-deep);margin-bottom:.4rem;font-weight:600;}
+  .card .tag{font-size:.8rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;display:block;margin-bottom:1.1rem;}
+  .card ul{list-style:none;display:grid;gap:.7rem;}
+  .card li{display:flex;gap:.6rem;font-weight:300;font-size:.96rem;align-items:flex-start;}
+  .check{flex:none;width:1.15rem;height:1.15rem;margin-top:.2rem;}
+
+  /* PRICING */
+  .pricing{background:var(--teal-deep);color:var(--cream);}
+  .pricing h2{color:var(--cream);}
+  .pricing .sec-kicker{color:var(--gold);}
+  .price-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;margin-top:2.5rem;}
+  @media(max-width:820px){.price-cards{grid-template-columns:1fr;}}
+  .price-card{background:rgba(251,244,230,.06);border:1px solid rgba(235,217,174,.3);border-radius:18px;padding:2.2rem 1.8rem;text-align:center;display:flex;flex-direction:column;gap:.6rem;transition:all .25s;}
+  .price-card:hover{background:rgba(251,244,230,.11);transform:translateY(-6px);}
+  .price-card.featured{background:var(--cream);color:var(--ink);border:none;box-shadow:0 18px 44px rgba(0,0,0,.25);}
+  .price-card h3{font-size:1.45rem;font-weight:600;color:inherit;}
+  .price{font-family:'Cormorant Garamond',serif;font-size:2.6rem;font-weight:700;color:var(--gold);line-height:1.1;}
+  .price small{font-size:1.05rem;font-weight:400;}
+  .price-note{font-weight:300;font-size:.95rem;opacity:.9;flex:1;}
+  .price-motto{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.15rem;color:var(--gold);}
+  .fine{margin-top:2rem;text-align:center;font-weight:300;font-size:.9rem;color:#BFD6D2;}
+
+  /* TRAINER */
+  .trainer-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:3.5rem;align-items:center;}
+  @media(max-width:820px){.trainer-grid{grid-template-columns:1fr;}}
+  .portrait{aspect-ratio:4/5;border-radius:60% 60% 18px 18px/45% 45% 18px 18px;background:linear-gradient(160deg,var(--teal-soft),var(--teal-deep));display:flex;align-items:center;justify-content:center;color:var(--cream);position:relative;overflow:hidden;box-shadow:0 20px 46px rgba(23,69,78,.22);}
+  .portrait span{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.05rem;text-align:center;padding:1rem;opacity:.85;}
+  .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 20%;}
+
+  /* SHOWCASE (space) */
+  .showcase{padding:4.5rem 1.5rem 1rem;}
+  .showcase-inner{max-width:1000px;margin:0 auto;text-align:center;}
+  .showcase figure{border-radius:20px;overflow:hidden;box-shadow:0 22px 50px rgba(23,69,78,.22);border:1px solid rgba(194,160,90,.35);}
+  .showcase img{width:100%;display:block;}
+  .showcase figcaption{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.2rem;color:var(--teal);margin-top:1.2rem;}
+  .signature{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.5rem;color:var(--teal);margin-top:1.4rem;}
+  .cred{font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;}
+  .testimonial{margin-top:2rem;background:var(--cream-2);border-radius:14px;padding:1.4rem 1.6rem;font-style:italic;font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--teal-deep);}
+  .testimonial cite{display:block;margin-top:.6rem;font-family:'Jost',sans-serif;font-style:normal;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);}
+
+  /* CONTACT */
+  .contact{background:linear-gradient(180deg,var(--cream-2),var(--cream));}
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem;}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-card{background:#fff;border-radius:18px;padding:2.2rem;box-shadow:0 14px 34px rgba(23,69,78,.09);}
+  .contact-card h3{font-size:1.5rem;color:var(--teal-deep);margin-bottom:1.2rem;}
+  .c-row{display:flex;gap:.9rem;align-items:flex-start;margin-bottom:1.1rem;font-weight:300;}
+  .c-row svg{flex:none;margin-top:.2rem;}
+  .c-row a{color:var(--teal);font-weight:500;text-decoration:none;}
+  .c-row a:hover{text-decoration:underline;}
+  .hours{font-size:.92rem;color:var(--teal);font-weight:300;}
+
+  /* FOOTER */
+  footer.site{background:var(--teal-deep);color:#BFD6D2;padding:2.4rem 1.5rem;text-align:center;font-weight:300;font-size:.88rem;}
+  .footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;}
+  .footer-main{flex:1;min-width:240px;text-align:left;}
+  .footer-logo{text-align:center;flex:none;}
+  .footer-logo img{width:150px;height:auto;display:block;margin:0 auto .5rem;border-radius:50%;}
+  .footer-logo p{font-size:.85rem;color:#CFE0DC;}
+  .footer-logo a{color:#EBD9AE;text-decoration:none;font-weight:500;}
+  .footer-logo a:hover{text-decoration:underline;}
+  @media(max-width:640px){.footer-inner{justify-content:center;}.footer-main{text-align:center;flex:none;}}
+  footer.site .brand{color:var(--cream);display:inline-block;margin-bottom:.6rem;font-size:1.3rem;}
+  footer.site .motto{font-family:'Cormorant Garamond',serif;font-style:italic;color:#EBD9AE;font-size:1.1rem;margin-bottom:.8rem;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">Optimal <span>You</span> Neurofeedback</a>
+    <ul class="nav-links">
+      <li><a href="#neurofeedback">Neurofeedback</a></li>
+      <li><a href="#who">Who Can Benefit</a></li>
+      <li><a href="#pricing">Training &amp; Cost</a></li>
+      <li><a href="#trainer">Your Trainer</a></li>
+      <li><a class="nav-cta" href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="hero-inner">
+    <div>
+      <p class="kicker">The Gym for Your Brain</p>
+      <h1>Your brain already knows <em>how to perform.</em></h1>
+      <p class="hero-sub">Neurofeedback helps remove the interference — so you can access greater focus, resilience, and mental agility.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#contact">Book Your First Session — $25</a>
+        <a class="btn btn-ghost" href="#neurofeedback">Discover Neurofeedback</a>
+      </div>
+      <p class="hero-script">You have the power to rewire. We're here to guide you. ♡</p>
+    </div>
+    <aside class="hero-card">
+      <h3>Resilience. Connection. Transformation.</h3>
+      <div class="pillars">
+        <div class="pillar">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C2A05A" stroke-width="1.6"><path d="M3 12c2-4 4-4 6 0s4 4 6 0 4-4 6 0"/></svg>
+          <div><b>Reduce Stress</b><span>Find calm and recover faster from pressure.</span></div>
+        </div>
+        <div class="pillar">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C2A05A" stroke-width="1.6"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
+          <div><b>Improve Focus</b><span>Perform better when the stakes are high.</span></div>
+        </div>
+        <div class="pillar">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#C2A05A" stroke-width="1.6"><path d="M12 21c-5-4-8-7-8-11a8 8 0 0 1 16 0c0 4-3 7-8 11z"/></svg>
+          <div><b>Enhance Well-Being</b><span>Sleep deeper, regulate emotion, live fully.</span></div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</header>
+
+<div class="trustbar">
+  <div class="trust-inner">
+    <div class="trust-item"><b>Personalized Care</b><span>Tailored to you</span></div>
+    <div class="trust-item"><b>Reduce Stress</b><span>Find calm</span></div>
+    <div class="trust-item"><b>Enhance Wellbeing</b><span>Live fully</span></div>
+    <div class="trust-motto">A Better Brain. <b style="color:#EBD9AE;">A Better You.</b></div>
+  </div>
+</div>
+
+<div class="showcase">
+  <div class="showcase-inner">
+    <figure>
+      <img src="img/ChatGPT Image Jul 9, 2026, 08_34_36 AM.png" alt="The Optimal You neurofeedback training room — a comfortable leather recliner, soft lighting, and a NeurOptimal® session in progress.">
+    </figure>
+    <figcaption>Your calm, comfortable space to train — right here in Gresham.</figcaption>
+  </div>
+</div>
+
+<section id="neurofeedback">
+  <div class="container">
+    <p class="sec-kicker">What Is It?</p>
+    <h2>Your brain already knows what to do.<br>Neurofeedback helps remove interference.</h2>
+    <div class="rule"></div>
+    <div class="video-wrap">
+      <video controls preload="metadata" playsinline>
+        <source src="Videos%20Optimal%20You/What%20is%20Neurofeedback.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="nf-grid">
+      <div>
+        <p class="lead" style="margin-bottom:1.6rem;">Think of it as strength training for your nervous system — no effort, no electricity in, nothing invasive. You simply relax, listen to music, and let your brain learn from its own real-time information.</p>
+        <blockquote>
+          "NeurOptimal® is a non-invasive brain training system using 'Dynamical Neurofeedback' to help the brain self-optimize by providing real-time feedback, often through music interruption, signaling when brainwave activity deviates from its normal patterns — leading to reported benefits like improved focus, sleep, stress management, and emotional stability, without forcing specific outcomes."
+          <footer>We proudly offer <a href="https://neuroptimal.com" target="_blank" rel="noopener">NeurOptimal®</a> sessions.</footer>
+        </blockquote>
+      </div>
+      <div>
+        <h3 class="serif" style="font-size:1.8rem;color:var(--teal-deep);margin-bottom:1.4rem;">The Process</h3>
+        <ol class="process">
+          <li><span class="step-num">1</span><div><b>We start with you.</b><p>We begin with what <em>you</em> think is getting in your way — sleep, stress, focus, performance.</p></div></li>
+          <li><span class="step-num">2</span><div><b>Relax &amp; train.</b><p>You settle into a comfortable chair with sensors that simply listen. Music plays; brief pauses give your brain the feedback it needs.</p></div></li>
+          <li><span class="step-num">3</span><div><b>Your brain self-corrects.</b><p>With each session your central nervous system practices returning to the present — flexible, resilient, and calm.</p></div></li>
+          <li><span class="step-num">4</span><div><b>Notice the shifts.</b><p>Clients report steadier moods, deeper sleep, sharper focus, and high-stakes clarity. We track what changes for you.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="who" id="who">
+  <div class="container">
+    <p class="sec-kicker">Who Can Benefit?</p>
+    <h2>What we can work on together</h2>
+    <div class="rule"></div>
+    <p class="lead">Neurofeedback meets you where you are — whether you lead a team, compete on the field, or navigate the world with a beautifully different brain.</p>
+    <div class="cards">
+      <div class="card">
+        <img class="card-img" src="img/ChatGPT Image Jul 13, 2026, 06_16_09 PM.png" alt="An executive shown stressed at his desk, then calm during a NeurOptimal® neurofeedback session.">
+        <h3>Executives</h3>
+        <span class="tag">Lead with clarity</span>
+        <ul>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#3E6F74" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5"/></svg>Make better decisions under pressure.</li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#3E6F74" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5"/></svg>Stay calm when everyone else is reactive.</li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#3E6F74" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5"/></svg>Sleep better so you lead better.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img class="card-img contain" src="img/ChatGPT Image Jul 17, 2026, 10_50_31 AM.png" alt="A focused baseball player at the plate, calm and ready.">
+        <h3>Athletes</h3>
+        <span class="tag">Find your edge</span>
+        <ul>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#3E6F74" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5"/></svg>Recover faster from stress.</li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#3E6F74" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5"/></svg>Think clearly when the stakes are high.</li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#3E6F74" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5"/></svg>Relax and let your best game come forth.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <img class="card-img" src="img/ChatGPT Image Jul 13, 2026, 06_11_50 PM.png" alt="A student studying while wearing NeurOptimal® neurofeedback sensors.">
+        <h3>Neurodivergents</h3>
+        <span class="tag">Thrive your way</span>
+        <ul>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#3E6F74" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5"/></svg>Improve focus and emotion regulation.</li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#3E6F74" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5"/></svg>Decrease impulsivity.</li>
+          <li><svg class="check" viewBox="0 0 24 24" fill="none" stroke="#3E6F74" stroke-width="2.4"><path d="M4 12.5l5 5L20 6.5"/></svg>Become more flexible and resilient.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <div class="container">
+    <p class="sec-kicker">Training &amp; Cost</p>
+    <h2>What does training look like?</h2>
+    <div class="price-cards">
+      <div class="price-card">
+        <h3>Train 2×/Week</h3>
+        <div class="price">$50<small>/session</small></div>
+        <p class="price-note">Consistent training builds a consistent brain. Most clients train twice a week to build momentum.</p>
+        <p class="price-motto">— The Gym for Your Brain</p>
+      </div>
+      <div class="price-card featured">
+        <h3>Purchase a Package</h3>
+        <div class="price">20 <small>for</small> $800</div>
+        <p class="price-note">or <b>40 sessions for $1,500</b> — commit to your transformation and save.</p>
+        <p class="price-motto">— You Are Worth It</p>
+      </div>
+      <div class="price-card">
+        <h3>Give a Gift</h3>
+        <div class="price">$25<small> first session</small></div>
+        <p class="price-note">Introduce a friend, family member, or colleague to brain training with a gifted first session.</p>
+        <p class="price-motto">— Spread the Peace</p>
+      </div>
+    </div>
+    <p class="fine">Come on in — your first session is a relaxed, no-pressure introduction to how your brain trains.</p>
+  </div>
+</section>
+
+<section id="trainer">
+  <div class="container trainer-grid">
+    <div class="portrait">
+      <img src="img/Headshot.png" alt="Sarita E. Trawick, LCSW — your neurofeedback trainer.">
+    </div>
+    <div>
+      <p class="sec-kicker">Your Trainer</p>
+      <h2>Hi, I'm Sarita E. Trawick</h2>
+      <div class="rule"></div>
+      <p class="lead" style="margin-bottom:1.2rem;">I would like to be your <b>trainer</b>, <b>detective</b>, and <b>cheerleader</b> to realize your optimal <em>YOU</em>.</p>
+      <p style="font-weight:300;max-width:44rem;">With more than 20 years in the mental health field, I bring deep experience in how brains get stuck — and how they change. I look forward to meeting you and working with you.</p>
+      <p class="signature">Sarita E. Trawick</p>
+      <p class="cred">Life Coach · Trainer · LCSW</p>
+      <div class="testimonial">
+        "Intuitive, experienced and supportive — that is what you get with Sarita. She meets you where you are now… while helping you get to where you want to be."
+        <cite>— Client testimonial</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <p class="sec-kicker">Come On In</p>
+    <h2>Contact me</h2>
+    <div class="rule"></div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3 class="serif">Let's get you started</h3>
+        <div class="c-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2A05A" stroke-width="1.8"><path d="M5 4h4l2 5-3 2a13 13 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>
+          <div><a href="tel:+15036883802">503-688-3802</a></div>
+        </div>
+        <div class="c-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2A05A" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <div><a href="mailto:healingspaces4u@gmail.com">healingspaces4u@gmail.com</a></div>
+        </div>
+        <div class="c-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2A05A" stroke-width="1.8"><path d="M12 21c-4-4-7-7.6-7-11a7 7 0 0 1 14 0c0 3.4-3 7-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div>2951 NW Division St, Ste 101<br>Gresham, OR 97030</div>
+        </div>
+        <div class="c-row">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C2A05A" stroke-width="1.8"><path d="M9 3v12.5a3.5 3.5 0 1 1-2-3.15"/><path d="M9 5a6 6 0 0 0 6 6"/></svg>
+          <div>TikTok: <a href="https://www.tiktok.com/@brainfit_1" target="_blank" rel="noopener">@brainfit_1</a></div>
+        </div>
+      </div>
+      <div class="contact-card" style="display:flex;flex-direction:column;justify-content:center;gap:1.2rem;">
+        <h3 class="serif">Ready when you are</h3>
+        <p style="font-weight:300;">Curious whether neurofeedback is right for you, your team, or your athlete? Reach out — I'm happy to answer questions before you book.</p>
+        <a class="btn btn-gold" style="align-self:flex-start;" href="mailto:healingspaces4u@gmail.com?subject=Neurofeedback%20Session%20Inquiry">Request a Session</a>
+        <p class="hours">Provider of NeurOptimal® Neurofeedback Systems · <a style="color:var(--teal);" href="https://neuroptimal.com" target="_blank" rel="noopener">neuroptimal.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="footer-inner">
+    <div class="footer-main">
+      <span class="brand">Optimal You Neurofeedback</span>
+      <p class="motto">A Better Brain. A Better You.</p>
+      <p>© 2026 Optimal You Neurofeedback · Gresham, Oregon · 503-688-3802</p>
+    </div>
+    <div class="footer-logo">
+      <img src="img/Nueroptimal logo white background.jpg" alt="We proudly offer NeurOptimal® sessions">
+      <p>To learn more go to <a href="https://www.neuroptimal.com" target="_blank" rel="noopener">www.neuroptimal.com</a></p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
