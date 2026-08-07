@@ -1,0 +1,16 @@
+# Local-only working files — NOT published to the website
+
+# Claude / editor config
+.claude/
+
+# Notes & source material
+Optimal You.txt
+Videos Optimal You/
+
+# Draft / alternate design variants (not the live page)
+index (2).html
+optimal-you-serene.html
+optimal-you-tranquil.html
+
+# Unused image variant (site uses "Optimal You Logo 2.png")
+img/Optimal You Logo 1.png
